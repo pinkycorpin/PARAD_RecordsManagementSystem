@@ -1,5 +1,13 @@
 <?php
-include_once('../include/admin_include.inc.php');
+
+session_start();
+
+if(!isset($_SESSION['user_admin'])){
+   echo"Contact the Authority";
+  header("Location= ../index.php?please-login");
+  exit();
+}
+
 include_once '../../includes/dbh.inc.php';
 
 ?>

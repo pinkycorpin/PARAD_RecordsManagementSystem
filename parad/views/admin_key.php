@@ -1,5 +1,13 @@
 <?php
-include_once('../include/admin_include.inc.php');
+
+session_start();
+
+if(!isset($_SESSION['user_admin'])){
+   echo"Contact the Authority";
+  header("Location= ../index.php?please-login");
+  exit();
+}
+
 include_once '../include/db.inc.php';
 
 ?>
@@ -15,11 +23,7 @@ include_once '../include/db.inc.php';
 if(isset($_POST['s_k'])){
 ?>
 <br>
-<form action="../include/logout.inc.php" method="POST">
-<button type="submit" name="submit" >logout</button>
-</form>
-
-<form action="../include/secret_key_edit" method="post">
+<form action="" method="post">
 	<strong>Enter Secret-Key:</strong><input type="password" name="old_key" placeholder="Enter secret-key" required="required"><br>
 	<strong>Enter New Secret-Key:</strong><input type="password" name="new_key" placeholder="Enter New secret-key" required="required"><br>
 	<strong>Confirm New Secret-Key:</strong><input type="password" name="confirm_key" placeholder="Confirm New secret-key"  required="required"><br>
