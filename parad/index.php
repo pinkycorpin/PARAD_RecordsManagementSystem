@@ -19,7 +19,8 @@ if(isset($_SESSION['user_name']) || isset($_SESSION['user_admin'])){
      </head>
 
 	   <body>
-     <div class="form-group">
+     <div class="form-group">\
+     <br>
         <center>
         <div class="border" style="box-shadow:0px 1px 2px 0px rgba(0,0,0,0.5);width:400px;height:540px;background-color:white;">
                 <br><br><img src="images/DARLogo.png" class="img-fluid" alt="Responsive image"><br><br>

@@ -3,24 +3,39 @@
 ?>
 
 	<div class="ui secondary pointing menu">
-		<a class="item">
-		    Home
-		</a>
-		<a class="active item">
-		    Cases
-		</a>
-		<a class="item">
-		    User
-		</a>
-		
-		<div class="right menu">
-		    <a class="ui item" href="../include/logout.inc.php">
-		      Logout
-		    </a>
-		</div>
-	</div>
+        <a class="item">
+            Home
+        </a>
+        <a class="item"  href="../views/admin_home.php">
+            View
+        </a>
+        <a class="active item" href="insert.php">
+            Insert
+        </a>
+        <a class="item">
+            User
+        </a>
+        
+        <div class="right menu">
+            <div class="m">
+                <div class="drop_cont">
+                    <button class="dropbut"> <img src="../images/profile.png" style="width:80%;height:100%;margin-top:-10%;"> </button>
+                    <div class="drop_conts">
+                        <a href="admin_user_name.php">Edit Username</a>
+                        <a href="admin_key.php">Edit Secret Key</a>
+                        <a href="form_password.php">Edit Password</a>
+                        <a href="user_pass.php">Edit Username and password</a>
+                    </div>
+                </div>
+            </div>
+            <a class="ui item" href="../include/logout.inc.php">
+              Logout
+            </a>
+        </div>
+    </div>
 
-    <div class="body" style="width:100%;height:80%;">
+    <div class="body" style="width:100%;height:auto;">
+
 		<center>
 		<div class="ui small form">
 	  		<div class="ui small form" style="width:65%;margin:3%;">
@@ -50,7 +65,8 @@
 			</form>
 			</div>
 		</div>
-	</center>
+		</center>
+	</div>
 
 <?php
 	include_once('../templates/footer.php');
