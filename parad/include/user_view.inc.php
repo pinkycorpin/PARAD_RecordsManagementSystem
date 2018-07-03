@@ -28,9 +28,22 @@ function myFunction() {
   }
 }
 </script>
+
+
+    <select name="select">
+    <option value="all">All</option>
+    <option value="name">Name</option>
+    <option value="case_title">Case Title</option>
+    <option value="case_number">Case #</option>
+    <option value="area">Area</option>
+    <option value="owner">Owner</option>
+    <option value="title_number">Title #</option>
+    </select>
+
+
 <?php
 echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:left;'>";
-    echo "<input type='text' name='status' value='Motu-proprio Investigation' style='display:none'>";
+    echo "<input type='text' name='status' value='' style='display:none'>";
 	echo"<th>Case ID :</th><th>Case Title</th><th>Case Number</th><th>Title Number</th><th>Land Area</th><th>land Owner</th><th>adjudicator</th><th>Status</th><th>timestamp</th>";
 	echo"<tr>";
 	while($col1 = $pd->fetch_assoc()){

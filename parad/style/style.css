@@ -1,7 +1,10 @@
 body{
-	background-color:gray;
+	
 	background-repeat: no-repeat;
 	background-position: center;
-	position:fixed;
 
+}
+table th{
+	font-size: 10%;
+	color: yellow;
 }
