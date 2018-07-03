@@ -27,24 +27,39 @@ include_once('../templates/header.php');
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
                         <a href="user_pass.php">Edit Username and password</a>
+                        <a href="../include/logout.inc.php">Logout</a>
                     </div>
                 </div>
             </div>
-
-            <a class="ui item" href="../include/logout.inc.php">
-              Logout
-            </a>
         </div>
     </div>
+<?php
+?>
+	<div class="body" style="width:100%;height:80%;">
+	    <center>
+	    	<div class="ui small form">
+	        	<div class="ui small form" style="width:30%;margin:3%;">
+			        <h2>EDIT PASSWORD</h2>
+			        <form action="../include/logout.inc.php" method="POST">
+						<form class="ui tiny form" action="../include/edit_password.inc.php"  method="post" >
+							<strong style="float: left">Enter New Password:</strong>
+								<input type="password" name="new_password" required="required"><br>
+							<strong style="float: left">Confirm New Password:</strong>
+								<input type="password" name="confirm_password" required="required"><br>
+							<strong style="float: left">Enter your User Name:</strong>
+								<input type="text" name="User" required="required" class="form-control"><br>
+							<strong style="float: left">Enter your Password:</strong>
+								<input type="password" name="password" required="required"><br>
+							</form>
+							<a href="admin_home.php"><button class="ui teal button" type="submit" name="submit" style="float:left;"> Back</button></a>
+							<a href="#"><button class="ui teal button" type="submit" name="submit" style="float:right"> Save</button></a>
+						</form>
+					</form>
+				</div>
+			</div>
+		</center>
+	</div>
 
-<br><br>
-<form action="../include/edit_password.inc.php"  method="post" >
-	<strong>Enter New Password:</strong><input type="password" name="new_password" placeholder="Enter New Password" required="required"><br>
-	<strong>Confirm New Password:</strong><input type="password" name="confirm_password" placeholder="Confirm New" required="required"><br>
-	<strong>Enter your User Name:</strong><input type="text" name="User" placeholder="User Name" required="required" class="form-control"><br>
-	<strong>Enter your Password:</strong><input type="password" name="password" placeholder="Password" required="required"><br>
-    <button type="submit" name="edit_password">Submit</button>
-	</form>
-      <form action="admin_home.php"  method="post">
-	 <button type="submit" name="option">Go back without changing</button><br>
-	</form>
+<?php
+  include_once('../templates/footer.php');
+?>
