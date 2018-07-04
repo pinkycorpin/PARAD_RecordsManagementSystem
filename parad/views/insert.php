@@ -40,6 +40,10 @@
 		<div class="ui small form">
 	  		<div class="ui small form" style="width:65%;margin:3%;">
 	  		<h2>Add Case Information</h2>
+<<<<<<< HEAD
+=======
+	  		<form action="../include/logout.inc.php" method="POST"> 
+>>>>>>> 87b33163f5b2e15990fe9cf3ce290decc615feb0
 			  <form class="ui tiny form" action="../include/insert_data_inc.php" method="POST">
 			  	<div class="field" style="margin-top:3%;">
 		            		<label style="float:left">Case ID:</label>
@@ -59,9 +63,14 @@
 		            		<label style="float:left">Status</label>
 		            		<input type="text" name="status" required="required"/><br>	 		
 		       	</div>
+<<<<<<< HEAD
 
 			  <center><br><button class="ui teal button" style="float:right;" type="submit" name="submit">submit</button><br></center>
 			 </form>
+=======
+			  </form>
+			  <center><br><button class="ui teal button" style="float:right;" type="submit" name="submit">submit</button><br></center>
+>>>>>>> 87b33163f5b2e15990fe9cf3ce290decc615feb0
 			</form>
 			</div>
 		</div>
