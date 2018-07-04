@@ -1,10 +1,57 @@
 body{
-	
+	background-color:white;
 	background-repeat: no-repeat;
 	background-position: center;
 
 }
-table th{
-	font-size: 10%;
-	color: yellow;
+
+
+
+.m   {
+    margin-top: -5px;
+    margin-left: 80%;
+    width: 10%;
+}
+
+.drop_cont {
+    float: right;
+    overflow: hidden;
+}
+
+.drop_cont .dropbut {
+    font-size: 11px;    
+    border: none;
+    outline: none;
+    color: white;
+    height: 40px;
+    background-color: inherit;
+}
+
+
+
+.drop_conts {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    font-size: 12px;
+}
+
+.drop_conts a {
+    float: none;
+    color: black;
+    padding: 14px 0px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.drop_conts a:hover {
+    background-color: #ddd;
+}
+
+.drop_cont:hover .drop_conts {
+    display: block;
 }

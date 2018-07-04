@@ -30,4 +30,6 @@ include_once('../include/admin_include.inc.php');
         <img src="../images/dept.png" class="img-fluid" alt="Responsive image" style="width:40%;height:100%;float:left;z-index:2;margin-top:1%;">
     </div>
 
-    <div class="body" style="width:100%;height:80%;">
+    
+    
+          
