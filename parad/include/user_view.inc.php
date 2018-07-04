@@ -86,7 +86,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="name"){
+}else if(baseline=="case_title"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];
     if (td) {
@@ -97,7 +97,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="case_title"){
+}else if(baseline=="case_number"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[2];
     if (td) {
@@ -108,7 +108,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="case_number"){
+}else if(baseline=="title_number"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[3];
     if (td) {
@@ -119,7 +119,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="area"){
+}else if(baseline=="land_area"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[4];
     if (td) {
@@ -130,7 +130,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="owner"){
+}else if(baseline=="land_owner"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[5];
     if (td) {
@@ -141,9 +141,20 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="title_number"){
+}else if(baseline=="adjucator"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[6];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}else if(baseline=="status"){
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[7];
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
@@ -162,12 +173,13 @@ if(baseline=="" || baseline=="all"){
     <select name="select" id="down" onchange="createValue()">
     <option value="all">All</option>
     <option value="id">ID</option>
-    <option value="name">Name</option>
     <option value="case_title">Case Title</option>
-    <option value="case_number">Case #</option>
-    <option value="area">Area</option>
-    <option value="owner">Owner</option>
-    <option value="title_number">Title #</option>
+    <option value="case_number">Case Number</option>
+    <option value="title_number">Title Number</option>
+    <option value="land_area">Land Area</option>
+    <option value="land_owner">Land Owner</option>
+    <option value="adjucator">Adjucator</option>
+    <option value="status">status</option>    
     </select>
 
 
@@ -205,7 +217,6 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
 	echo "<td>";
 	echo $col1["timestamp"];
 	echo "</td>";
-  echo"</tr>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
   echo "EDIT";
@@ -215,6 +226,7 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo "VIEW";
   echo "</td>";
   echo"</tr>";
+
 	}
 	echo "</form>";
 
