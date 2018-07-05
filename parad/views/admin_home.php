@@ -45,11 +45,21 @@ include_once('../include/db.inc.php');
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
                         <a href="user_pass.php">Edit Username and password</a>
+<<<<<<< HEAD
                         <a href="delete_user.php">Delete User</a>
                         <a href="../include/logout.inc.php">Logout</a>
                     </div>
                 </div>
             </div>
+=======
+                        <a href="../include/logout.inc.php">
+                          Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+>>>>>>> 1b736a4b674b50b5bbd72f914486ce7fd0298c8f
         </div>
     </div>
 
