@@ -15,40 +15,6 @@ $c=0;
     baseline = document.getElementById("down").value;
     alert(baseline);
   }
-  /*
-function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    if(baseline == "" || baseline == "all"){
-    td = tr[i];
-    }else if(baseline == "id"){
-      td = tr[i].getElementsByTagName("td")[0];
-    }else if(baseline == "name"){
-      td = tr[i].getElementsByTagName("td")[1];
-    }else if(baseline == "case_title"){
-      td = tr[i].getElementsByTagName("td")[2];
-    }else if(baseline == "case_number"){
-      td = tr[i].getElementsByTagName("td")[3];
-    }else if(baseline == "area"){
-     td = tr[i].getElementsByTagName("td")[4];
-    }else if(baseline == "owner"){
-     td = tr[i].getElementsByTagName("td")[5];
-    }else if(baseeline == "title_number"){
-     td = tr[i].getElementsByTagName("td")[6];
-    }
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}*/
 </script>
 
 <script>
@@ -168,7 +134,6 @@ if(baseline=="" || baseline=="all"){
 
 }
 </script>
-
 
     <select name="select" id="down" onchange="createValue()">
     <option value="all">All</option>
