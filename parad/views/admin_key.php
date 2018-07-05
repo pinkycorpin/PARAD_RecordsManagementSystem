@@ -41,8 +41,7 @@ include_once('../templates/header.php');
     <div class="ui small form">
         <div class="ui small form" style="width:30%;margin:3%;">
 	        <h2>EDIT SECRET KEY</h2>
-	        <form action="../include/logout.inc.php" method="POST"> 
-				<form class="ui tiny form" action="../include/secret_key_edit" method="post">
+				<form class="ui tiny form" action="../include/secret_key_edit.php" method="post">
 					<strong style="float: left">Enter Secret-Key:</strong>
 						<input type="password" name="old_key" required="required"><br><br>
 					<strong style="float: left">Enter New Secret-Key:</strong>
@@ -53,9 +52,7 @@ include_once('../templates/header.php');
 						<input type="text" name="User" required="required"><br><br>
 				    <strong style="float: left">Enter your password:</strong>
 				    	<input type="password" name="Pass" required="required"><br><br>
-			    </form>
-			        <a href="admin_home.php"><button class="ui teal button" type="submit" name="submit" style="float:left;"> Back</button></a>
-			        <a href="#"><button class="ui teal button" type="submit" name="submit" style="float:right"> Save</button></a>
+			        <button class="ui teal button" type="submit" name="edit_secret-key" style="float:center"> Save</button>
 	     	</form>
      	</div>
     </div>

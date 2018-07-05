@@ -42,8 +42,6 @@ include_once('../templates/header.php');
     <div class="ui small form">
         <div class="ui small form" style="width:30%;margin:3%;">
         <h2>Edit Username</h2>
-        <form action="../include/logout.inc.php" method="POST"> 
-        <form class="ui tiny form" action="../include/insert_data_inc.php" method="POST">
           <div class="field" style="margin-top:3%;">
                 <form action="../include/admin_user_name.inc.php"  method="post">
                   <strong style="float:left;">Enter New User Name:</strong><br>
@@ -54,14 +52,9 @@ include_once('../templates/header.php');
                     <input type="text" name="User" required="required" ><br><br>
                   <strong style="float:left;">Enter your password:</strong><br>
                     <input type="password" name="Pass" required="required" ><br><br>
-                </form>        
-            </div>
-        </form>
-        <a href="admin_home.php"><button class="ui teal button" type="submit" name="submit" style="float:left;"> Back</button></a>
-        <a href="#"><button class="ui teal button" type="submit" name="submit" style="float:right"> Save</button></a>
-      </form>
-        </form>
-      </div>
+                  <button class="ui teal button" type="submit" name="edit_username" style="float:center;"> Save</button>
+                </form>
+          </div>
     </div>
     </center>
   </div>

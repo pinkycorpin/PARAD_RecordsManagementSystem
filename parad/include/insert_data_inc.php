@@ -12,9 +12,9 @@ include_once('db.inc.php');
   $adjudicator=mysqli_real_escape_string($conn,$_POST['adjudicator']);
   $status=mysqli_real_escape_string($conn,$_POST['status']);
 
-            $sql4="INSERT INTO case_information (case_info_id,case_title,case_number,title_number,land_area,land_owner,adjudicator,status)
+            $sql4="INSERT INTO case_information (case_title,case_number,title_number,land_area,land_owner,adjudicator,status)
             VALUES
-            ('$case_id','$case_title','$case_number','$title_number','$land_area','$land_owner','$adjudicator','$status')";
+            ('$case_title','$case_number','$title_number','$land_area','$land_owner','$adjudicator','$status')";
             mysqli_query($conn,$sql4);
             $conn->close();
             header("Location: ../views/admin_home.php");

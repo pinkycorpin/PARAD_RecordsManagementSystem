@@ -40,7 +40,6 @@ include_once('../templates/header.php');
 	    	<div class="ui small form">
 	        	<div class="ui small form" style="width:30%;margin:3%;">
 			        <h2>EDIT PASSWORD</h2>
-			        <form action="../include/logout.inc.php" method="POST">
 						<form class="ui tiny form" action="../include/edit_password.inc.php"  method="post" >
 							<strong style="float: left">Enter New Password:</strong>
 								<input type="password" name="new_password" required="required"><br>
@@ -50,11 +49,8 @@ include_once('../templates/header.php');
 								<input type="text" name="User" required="required" class="form-control"><br>
 							<strong style="float: left">Enter your Password:</strong>
 								<input type="password" name="password" required="required"><br>
-							</form>
-							<a href="admin_home.php"><button class="ui teal button" type="submit" name="submit" style="float:left;"> Back</button></a>
-							<a href="#"><button class="ui teal button" type="submit" name="submit" style="float:right"> Save</button></a>
+							<a href="#"><button class="ui teal button" type="submit" name="edit_password" style="float:center"> Save</button></a>
 						</form>
-					</form>
 				</div>
 			</div>
 		</center>
