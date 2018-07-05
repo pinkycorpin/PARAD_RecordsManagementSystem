@@ -16,12 +16,91 @@ $c=0;
     alert(baseline);
   }
   /*
+<<<<<<< HEAD
 function myFunction() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    if(baseline == "" || baseline == "all"){
+    td = tr[i];
+    }else if(baseline == "id"){
+      td = tr[i].getElementsByTagName("td")[0];
+    }else if(baseline == "name"){
+      td = tr[i].getElementsByTagName("td")[1];
+    }else if(baseline == "case_title"){
+      td = tr[i].getElementsByTagName("td")[2];
+    }else if(baseline == "case_number"){
+      td = tr[i].getElementsByTagName("td")[3];
+    }else if(baseline == "area"){
+     td = tr[i].getElementsByTagName("td")[4];
+    }else if(baseline == "owner"){
+     td = tr[i].getElementsByTagName("td")[5];
+    }else if(baseeline == "title_number"){
+     td = tr[i].getElementsByTagName("td")[6];
+    }
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}*/
+</script>
+
+<script>
+var baseline = "";
+function createValue(){
+   var juan = document.getElementById('down').value;
+  this.baseline = juan;
+}
+=======
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+if(baseline=="" || baseline=="all"){
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}else if(baseline=="id"){
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}else if(baseline=="name"){
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}else if(baseline=="case_title"){
   for (i = 0; i < tr.length; i++) {
     if(baseline == "" || baseline == "all"){
     td = tr[i];
@@ -86,7 +165,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="name"){
+}else if(baseline=="case_title"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];
     if (td) {
@@ -97,7 +176,7 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
-}else if(baseline=="case_title"){
+}else if(baseline=="case_number"){
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[2];
     if (td) {
@@ -108,7 +187,11 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
+<<<<<<< HEAD
 }else if(baseline=="case_number"){
+=======
+}else if(baseline=="title_number"){
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[3];
     if (td) {
@@ -119,7 +202,11 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
+<<<<<<< HEAD
 }else if(baseline=="area"){
+=======
+}else if(baseline=="land_area"){
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[4];
     if (td) {
@@ -130,7 +217,11 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
+<<<<<<< HEAD
 }else if(baseline=="owner"){
+=======
+}else if(baseline=="land_owner"){
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[5];
     if (td) {
@@ -141,7 +232,11 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
+<<<<<<< HEAD
 }else if(baseline=="title_number"){
+=======
+}else if(baseline=="adjucator"){
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[6];
     if (td) {
@@ -152,6 +247,20 @@ if(baseline=="" || baseline=="all"){
       }
     }       
   }
+<<<<<<< HEAD
+=======
+}else if(baseline=="status"){
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[7];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
 }
 
 
@@ -162,12 +271,17 @@ if(baseline=="" || baseline=="all"){
     <select name="select" id="down" onchange="createValue()">
     <option value="all">All</option>
     <option value="id">ID</option>
+<<<<<<< HEAD
     <option value="name">Name</option>
+=======
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
     <option value="case_title">Case Title</option>
-    <option value="case_number">Case #</option>
-    <option value="area">Area</option>
-    <option value="owner">Owner</option>
-    <option value="title_number">Title #</option>
+    <option value="case_number">Case Number</option>
+    <option value="title_number">Title Number</option>
+    <option value="land_area">Land Area</option>
+    <option value="land_owner">Land Owner</option>
+    <option value="adjucator">Adjucator</option>
+    <option value="status">status</option>    
     </select>
 
 
@@ -205,7 +319,10 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
 	echo "<td>";
 	echo $col1["timestamp"];
 	echo "</td>";
+<<<<<<< HEAD
   echo"</tr>";
+=======
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
   echo "EDIT";
@@ -215,6 +332,10 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo "VIEW";
   echo "</td>";
   echo"</tr>";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 390e3be4db1e342b38e33e259563d61f5c301b27
 	}
 	echo "</form>";
 
