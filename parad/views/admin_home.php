@@ -45,20 +45,18 @@ include_once('../include/db.inc.php');
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
                         <a href="user_pass.php">Edit Username and password</a>
-                        <a href="../include/logout.inc.php">
-                          Logout
-                        </a>
+                        <a href="delete_user.php">Delete User</a>
+                        <a href="../include/logout.inc.php">Logout</a>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
     <center>
     <div class="body" style="width:100%;height:80%;">
         
-        <div class="view" style="width:80%;height:100%;background-color:lightgray;">   
+        <div class="view" style="width:95%;height:100%;background-color:rgba(225,225,225,.3);">   
             <?php include_once('../include/user_view.inc.php');?>
         </div>
         

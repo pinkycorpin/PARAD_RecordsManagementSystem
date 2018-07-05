@@ -26,8 +26,8 @@ if(isset($_SESSION['user_name']) || isset($_SESSION['user_admin'])){
                 <br><br><img src="images/DARLogo.png" class="img-fluid" alt="Responsive image"><br><br>
                 <legend style="text-align:center;">Login</legend><br>
                 <form class="form-group" action="include/login.inc.php" method="POST">
-                    <input class="form-group" type="text" placeholder="enter username" class="form-control"  name="username" style="text-align:center;font-size:15px;" required="required"/><br>
-                    <input class="form-group" type="password" placeholder="enter password" class="form-control" name="password" style="text-align:center;font-size:15px;" required="required"/><br>
+                    <input class="form-group" type="text" class="form-control"  name="username" style="text-align:center;font-size:15px;" required="required"/><br>
+                    <input class="form-group" type="password" class="form-control" name="password" style="text-align:center;font-size:15px;" required="required"/><br>
                     <button class="btn btn-sm" style="background-color:rgb(0,62,62);color:white;" value="login" name='submit'>Login </button>
                 </form>
                 <center><a href="views/register.php">Register</a></center>
