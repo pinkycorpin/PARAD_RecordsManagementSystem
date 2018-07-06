@@ -163,13 +163,13 @@ if(baseline=="" || baseline=="all"){
 <form action="../include/view_edit.php" method="POST">
 
 <?php
-echo"<table id=\"myTable\" class='ui black table' style='float:left; width:100%;'>";
+echo"<table id=\"myTable\" class='ui inverted grey table' style='float:left; width:100%;'>";
     echo "<input type='text' name='status' value='' style='display:none'>";
   echo"<th>Case ID :</th><th>Case Title</th><th>Case Number</th><th>Title Number</th><th>Land Area</th><th>Land Owner</th><th>Adjudicator</th><th>Status</th><th>Timestamp</th><th colspan='2'><center>Action</center></th>";
   echo"<tr>";
   while($col1 = $pd->fetch_assoc()){
   $c++;
-  echo "<td>";
+  echo "<td class='text'>";
   echo $col1["case_info_id"];
   echo"</td>";
   echo"<td>";
@@ -198,19 +198,11 @@ echo"<table id=\"myTable\" class='ui black table' style='float:left; width:100%;
   echo "</td>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
-<<<<<<< HEAD
-  echo "<button name='edit_button' value='$col1[case_info_id]' class='ui black basic button' style='width:85%;'>EDIT</button>";
+  echo "<button name='edit_button' value='$col1[case_info_id]' class='ui inverted button' >EDIT</button>";
   echo "</td>";
   }
   echo "<td>";
-  echo "<button name='view_button' value='$col1[case_info_id]' class='ui black basic button'style='width:85%;'>VIEW</button>";
-=======
-  echo "<button name='edit_button' value='$col1[case_info_id]' >EDIT</button>";
-  echo "</td>";
-  }
-  echo "<td>";
-  echo "<button name='view_button' value='$col1[case_info_id]' >VIEW</button>";
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
+  echo "<button name='view_button' value='$col1[case_info_id]' class='ui inverted primary button'>VIEW</button>";
   echo "</td>";
   echo"</tr>";
 

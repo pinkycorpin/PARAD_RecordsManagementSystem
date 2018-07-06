@@ -4,7 +4,7 @@ include_once '../include/db.inc.php';
 include_once('../templates/header.php');
 ?>
 
- <div class="ui secondary pointing menu" style="width:100%;">
+ <div class="ui secondary pointing menu">
         <a class="item">
             Home
         </a>
@@ -26,7 +26,6 @@ include_once('../templates/header.php');
                         <a href="admin_user_name.php">Edit Username</a>
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
-                        <a href="user_pass.php">Edit Username and password</a>
                         <a href="../include/logout.inc.php">Logout</a>
                     </div>
                 </div>

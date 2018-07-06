@@ -26,7 +26,6 @@ include_once('../templates/header.php');
                         <a href="admin_user_name.php">Edit Username</a>
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
-                        <a href="user_pass.php">Edit Username and password</a>
                         <a href="../include/logout.inc.php">Logout</a>
                     </div>
                 </div>

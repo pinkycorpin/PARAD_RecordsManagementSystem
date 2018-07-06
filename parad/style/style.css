@@ -1,9 +1,20 @@
+.table {
+  table-layout:fixed;
+}
+
+.table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 body{
 	background-color:white;
 	background-repeat: no-repeat;
 	background-position: center;
 
 }
+
 
 
 .m   {
@@ -54,4 +65,3 @@ body{
 .drop_cont:hover .drop_conts {
     display: block;
 }
-

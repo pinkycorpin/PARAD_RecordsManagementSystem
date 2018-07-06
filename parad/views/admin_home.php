@@ -22,7 +22,7 @@ include_once('../include/db.inc.php');
     </div>
 
 
-    <div class="ui secondary pointing menu" style="width:100%;">
+    <div class="ui secondary pointing menu">
         <a class="item" href="../views/admin_home.php">
             Home
         </a>
@@ -44,7 +44,6 @@ include_once('../include/db.inc.php');
                         <a href="admin_user_name.php">Edit Username</a>
                         <a href="admin_key.php">Edit Secret Key</a>
                         <a href="form_password.php">Edit Password</a>
-                        <a href="user_pass.php">Edit Username and password</a>
                         <a href="delete_user.php">Delete User</a>
                         <a href="../include/logout.inc.php">Logout</a>
                     </div>
@@ -54,20 +53,21 @@ include_once('../include/db.inc.php');
     </div>
 
     <center>
-    <div class="body" style="width:100%;height:80%;">
+    <div class="body" style="width:100%;height:auto;">
         
-<<<<<<< HEAD
-        <div class="view" style="width:95%;height:100%;margin-bottom:20%;">   
-=======
-        <div class="view" style="width:80%;height:100%;background-color:lightgray;">   
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
+        <div class="view" style="width:95%;height:100%;">   
             <?php include_once('../include/user_view.inc.php');?>
         </div>
         
-        <div class="footer" style="display:flex;left:0;bottom:0;width: 100%;color: white;text-align:center;height:5%;background-color:rgb(0,62,62)">
+        <div class="footer" style="width:100%;height:5%; background-color:rgb(0,62,62);">
             <br><br>
         </div>
-
     </div>
     </center>
-</body>   
+
+</body>            
+                 
+
+
+
+

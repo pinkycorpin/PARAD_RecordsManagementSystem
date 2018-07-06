@@ -4,16 +4,6 @@ include_once('../templates/header.php');
 
 ?>
 
-<<<<<<< HEAD
-<div class="ui secondary pointing menu" style="width:100%;">
-        <a class="item">
-            Home
-        </a>
-        <a class="active item"  href="../views/admin_home.php">
-            View
-        </a>
-        <a class="item" href="../views/insert.php">
-=======
 <div class="ui secondary pointing menu">
         <a class="item">
             Home
@@ -22,7 +12,6 @@ include_once('../templates/header.php');
             View
         </a>
         <a class="item" href="insert.php">
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
             Insert
         </a>
         <a class="item">
@@ -34,17 +23,10 @@ include_once('../templates/header.php');
                 <div class="drop_cont">
                   <button class="dropbut"> <img src="../images/profile.png" style="width:80%;height:100%;"> </button>
                     <div class="drop_conts">
-<<<<<<< HEAD
                         <a href="../views/admin_user_name.php">Edit Username</a>
                         <a href="../include/admin_key.php">Edit Secret Key</a>
                         <a href="../views/form_password.php">Edit Password</a>
                         <a href="../views/user_pass.php">Edit Username and password</a>
-=======
-                        <a href="admin_user_name.php">Edit Username</a>
-                        <a href="admin_key.php">Edit Secret Key</a>
-                        <a href="form_password.php">Edit Password</a>
-                        <a href="user_pass.php">Edit Username and password</a>
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
                         <a href="../include/logout.inc.php"">Logout</a>
                     </div>
                 </div>
@@ -83,7 +65,6 @@ else if(isset($_POST['view_button'])){
             while($col1 = $py->fetch_assoc()){
                   if($col1['case_info_id'] == $User){
 
-<<<<<<< HEAD
                       echo "<center>";
                        echo "Case Title: " . ' ' . $col1['case_title'].'<br>';
                        echo "Case Number: " . ' ' . $col1['case_number'].'<br>';
@@ -96,16 +77,6 @@ else if(isset($_POST['view_button'])){
                        echo "</center>";
 
                        
-=======
-                       echo $col1['case_title'].'<br>';
-                       echo $col1['case_number'].'<br>';
-                       echo $col1['title_number'].'<br>';
-                       echo $col1['land_area'].'<br>';
-                       echo $col1['land_owner'].'<br>';
-                       echo $col1['adjudicator'].'<br>';
-                       echo $col1['status'].'<br>';
-                       echo $col1['timestamp'].'<br>';
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
 
                   }
              }
@@ -151,18 +122,7 @@ else if(isset($_POST['edit_button'])){
               ?>
             </div>
       </center>
-<<<<<<< HEAD
-      ?>
-
-
   </div>
-
-      <?php
-      include_once('../templates/footer.php');
-    ?>
-=======
-  </div>
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
               <?php
                   }
             }
@@ -175,10 +135,7 @@ else if(isset($_POST['edit_button'])){
 
 
 
-<<<<<<< HEAD
-=======
 ?>
 <?php
   include_once('../templates/footer.php');
 ?>
->>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
