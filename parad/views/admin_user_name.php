@@ -4,6 +4,9 @@ include_once('../include/db.inc.php');
 include_once('../templates/header.php');
 ?>
 
+  <link rel="stylesheet" type="text/css" href="../style/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+  <link rel="stylesheet" type="text/css" href="../style/semantic.css">
 
   <div class="ui secondary pointing menu">
         <a class="item">
