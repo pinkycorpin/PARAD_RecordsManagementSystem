@@ -20,6 +20,7 @@ var baseline = "";
 function createValue(){
    var juan = document.getElementById('down').value;
   this.baseline = juan;
+   myFunction();
 }
 function myFunction() {
   var input, filter, table, tr, td, i;
@@ -131,6 +132,20 @@ if(baseline=="" || baseline=="all"){
 }
 </script>
 
+<<<<<<< HEAD
+    <select name="select" id="down" onchange="createValue()">
+    <option value="all">All</option>
+    <option value="id">ID</option>
+    <option value="case_title">Case Title</option>
+    <option value="case_number">Case Number</option>
+    <option value="title_number">Title Number</option>
+    <option value="land_area">Land Area</option>
+    <option value="land_owner">Land Owner</option>
+    <option value="adjucator">Adjucator</option>
+    <option value="status">status</option>    
+    </select>
+<form action="../include/view_edit.php" method="POST">
+=======
 
        <table class="table table-borderless" style="width:30%;float:right;background-color:rgba(225,225,225,.01);">
           <thead>
@@ -159,6 +174,7 @@ if(baseline=="" || baseline=="all"){
             </tr>
           </thead>
         </table>
+>>>>>>> cd35a6baba1256fa1bf39ee0a0db4e5ab5959881
 
 <?php
 echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:left;'>";
@@ -176,7 +192,7 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo"<td>";
   echo $col1["case_number"];
   echo "</td>";
-    echo"<td>";
+  echo"<td>";
   echo $col1["title_number"];
   echo"</td>";
   echo "<td>";
@@ -196,11 +212,11 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo "</td>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
-  echo "EDIT";
+  echo "<button name='edit_button' value='$col1[case_info_id]' >EDIT</button>";
   echo "</td>";
   }
   echo "<td>";
-  echo "VIEW";
+  echo "<button name='view_button' value='$col1[case_info_id]' >VIEW</button>";
   echo "</td>";
   echo"</tr>";
 
@@ -218,7 +234,6 @@ else{
                               ";
 }
 echo"</table>";
-
 $conn->close();
 
 ?>
