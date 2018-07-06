@@ -15,11 +15,10 @@ if(isset($_SESSION['user_name']) || isset($_SESSION['user_admin'])){
      <head>
      	<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
      	<link rel="stylesheet" type="text/css" href="style/style.css">
-      
      </head>
 
 	   <body>
-     <div class="form-group">\
+     <div class="form-group">
      <br>
         <center>
         <div class="border" style="box-shadow:0px 1px 2px 0px rgba(0,0,0,0.5);width:400px;height:540px;background-color:white;">

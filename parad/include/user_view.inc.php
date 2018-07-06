@@ -22,6 +22,7 @@ var baseline = "";
 function createValue(){
    var juan = document.getElementById('down').value;
   this.baseline = juan;
+   myFunction();
 }
 function myFunction() {
   var input, filter, table, tr, td, i;
@@ -146,7 +147,7 @@ if(baseline=="" || baseline=="all"){
     <option value="adjucator">Adjucator</option>
     <option value="status">status</option>    
     </select>
-
+<form action="../include/view_edit.php" method="POST">
 
 <?php
 echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:left;'>";
@@ -164,7 +165,7 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo"<td>";
   echo $col1["case_number"];
   echo "</td>";
-    echo"<td>";
+  echo"<td>";
   echo $col1["title_number"];
   echo"</td>";
   echo "<td>";
@@ -184,11 +185,11 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo "</td>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
-  echo "EDIT";
+  echo "<button name='edit_button' value='$col1[case_info_id]' >EDIT</button>";
   echo "</td>";
   }
   echo "<td>";
-  echo "VIEW";
+  echo "<button name='view_button' value='$col1[case_info_id]' >VIEW</button>";
   echo "</td>";
   echo"</tr>";
 
@@ -206,7 +207,6 @@ else{
                               ";
 }
 echo"</table>";
-
 $conn->close();
 
 ?>
