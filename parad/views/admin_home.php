@@ -22,7 +22,7 @@ include_once('../include/db.inc.php');
     </div>
 
 
-    <div class="ui secondary pointing menu">
+    <div class="ui secondary pointing menu" style="width:100%;">
         <a class="item" href="../views/admin_home.php">
             Home
         </a>
@@ -56,19 +56,14 @@ include_once('../include/db.inc.php');
     <center>
     <div class="body" style="width:100%;height:80%;">
         
-        <div class="view" style="width:95%;height:100%;background-color:rgba(225,225,225,.3);">   
+        <div class="view" style="width:95%;height:100%;margin-bottom:20%;">   
             <?php include_once('../include/user_view.inc.php');?>
         </div>
         
-        <div class="footer" style="width:100%;height:5%; background-color:rgb(0,62,62);">
+        <div class="footer" style="display:flex;left:0;bottom:0;width: 100%;color: white;text-align:center;height:5%;background-color:rgb(0,62,62)">
             <br><br>
         </div>
+
     </div>
     </center>
-
-</body>            
-                 
-
-
-
-
+</body>   

@@ -6,7 +6,7 @@ include_once('../include/admin_include.inc.php');
 	include_once('../templates/header.php');
 ?>
 
-	<div class="ui secondary pointing menu">
+	<div class="ui secondary pointing menu" style="width:100%;">
         <a class="item">
             Home
         </a>

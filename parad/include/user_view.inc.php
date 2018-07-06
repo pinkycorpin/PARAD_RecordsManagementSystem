@@ -1,4 +1,3 @@
-
 <?php
 
 $case_details = "SELECT * from case_information";
@@ -129,29 +128,16 @@ if(baseline=="" || baseline=="all"){
     }       
   }
 }
+
+
 }
 </script>
 
-<<<<<<< HEAD
-    <select name="select" id="down" onchange="createValue()">
-    <option value="all">All</option>
-    <option value="id">ID</option>
-    <option value="case_title">Case Title</option>
-    <option value="case_number">Case Number</option>
-    <option value="title_number">Title Number</option>
-    <option value="land_area">Land Area</option>
-    <option value="land_owner">Land Owner</option>
-    <option value="adjucator">Adjucator</option>
-    <option value="status">status</option>    
-    </select>
-<form action="../include/view_edit.php" method="POST">
-=======
-
-       <table class="table table-borderless" style="width:30%;float:right;background-color:rgba(225,225,225,.01);">
+     <table class="table table-borderless" style="width:30%;float:right;background-color:rgba(225,225,225,.01);">
           <thead>
             <tr>
               <th scope="col">
-              <select class="ui dropdown">
+              <select class="ui dropdown" name="select" id="down" onchange="createValue()">
                   <option value="all">All</option>
                   <option value="id">ID</option>
                   <option value="case_title">Case Title</option>
@@ -174,12 +160,12 @@ if(baseline=="" || baseline=="all"){
             </tr>
           </thead>
         </table>
->>>>>>> cd35a6baba1256fa1bf39ee0a0db4e5ab5959881
+<form action="../include/view_edit.php" method="POST">
 
 <?php
-echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:left;'>";
+echo"<table id=\"myTable\" class='ui black table' style='float:left; width:100%;'>";
     echo "<input type='text' name='status' value='' style='display:none'>";
-  echo"<th>Case ID :</th><th>Case Title</th><th>Case Number</th><th>Title Number</th><th>Land Area</th><th>land Owner</th><th>adjudicator</th><th>Status</th><th>timestamp</th><th colspan=''>Action</th>";
+  echo"<th>Case ID :</th><th>Case Title</th><th>Case Number</th><th>Title Number</th><th>Land Area</th><th>Land Owner</th><th>Adjudicator</th><th>Status</th><th>Timestamp</th><th colspan='2'><center>Action</center></th>";
   echo"<tr>";
   while($col1 = $pd->fetch_assoc()){
   $c++;
@@ -212,11 +198,11 @@ echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:
   echo "</td>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
-  echo "<button name='edit_button' value='$col1[case_info_id]' >EDIT</button>";
+  echo "<button name='edit_button' value='$col1[case_info_id]' class='ui black basic button' style='width:85%;'>EDIT</button>";
   echo "</td>";
   }
   echo "<td>";
-  echo "<button name='view_button' value='$col1[case_info_id]' >VIEW</button>";
+  echo "<button name='view_button' value='$col1[case_info_id]' class='ui black basic button'style='width:85%;'>VIEW</button>";
   echo "</td>";
   echo"</tr>";
 

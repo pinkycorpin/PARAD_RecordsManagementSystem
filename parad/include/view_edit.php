@@ -4,14 +4,14 @@ include_once('../templates/header.php');
 
 ?>
 
-<div class="ui secondary pointing menu">
+<div class="ui secondary pointing menu" style="width:100%;">
         <a class="item">
             Home
         </a>
-        <a class="item"  href="../views/admin_home.php">
+        <a class="active item"  href="../views/admin_home.php">
             View
         </a>
-        <a class="item" href="insert.php">
+        <a class="item" href="../views/insert.php">
             Insert
         </a>
         <a class="item">
@@ -23,10 +23,10 @@ include_once('../templates/header.php');
                 <div class="drop_cont">
                   <button class="dropbut"> <img src="../images/profile.png" style="width:80%;height:100%;"> </button>
                     <div class="drop_conts">
-                        <a href="admin_user_name.php">Edit Username</a>
-                        <a href="admin_key.php">Edit Secret Key</a>
-                        <a href="form_password.php">Edit Password</a>
-                        <a href="user_pass.php">Edit Username and password</a>
+                        <a href="../views/admin_user_name.php">Edit Username</a>
+                        <a href="../include/admin_key.php">Edit Secret Key</a>
+                        <a href="../views/form_password.php">Edit Password</a>
+                        <a href="../views/user_pass.php">Edit Username and password</a>
                         <a href="../include/logout.inc.php"">Logout</a>
                     </div>
                 </div>
@@ -65,14 +65,18 @@ else if(isset($_POST['view_button'])){
             while($col1 = $py->fetch_assoc()){
                   if($col1['case_info_id'] == $User){
 
-                       echo $col1['case_title'].'<br>';
-                       echo $col1['case_number'].'<br>';
-                       echo $col1['title_number'].'<br>';
-                       echo $col1['land_area'].'<br>';
-                       echo $col1['land_owner'].'<br>';
-                       echo $col1['adjudicator'].'<br>';
-                       echo $col1['status'].'<br>';
-                       echo $col1['timestamp'].'<br>';
+                      echo "<center>";
+                       echo "Case Title: " . ' ' . $col1['case_title'].'<br>';
+                       echo "Case Number: " . ' ' . $col1['case_number'].'<br>';
+                       echo "Title Number: " . ' ' . $col1['title_number'].'<br>';
+                       echo "Land Area: " . ' ' . $col1['land_area'].'<br>';
+                       echo "Land Owner: " . ' ' . $col1['land_owner'].'<br>';
+                       echo "Adjudicator: " . ' ' . $col1['adjudicator'].'<br>';
+                       echo "Status: " . ' ' . $col1['status'].'<br>';
+                       echo "timestamp: " . ' ' . $col1['timestamp'].'<br>';
+                       echo "</center>";
+
+                       
 
                   }
              }
@@ -118,7 +122,14 @@ else if(isset($_POST['edit_button'])){
               ?>
             </div>
       </center>
+      ?>
+
+
   </div>
+
+      <?php
+      include_once('../templates/footer.php');
+    ?>
               <?php
                   }
             }
@@ -131,7 +142,3 @@ else if(isset($_POST['edit_button'])){
 
 
 
-?>
-<?php
-  include_once('../templates/footer.php');
-?>
