@@ -198,11 +198,19 @@ echo"<table id=\"myTable\" class='ui black table' style='float:left; width:100%;
   echo "</td>";
   if(isset($_SESSION['user_admin'])){
   echo "<td>";
+<<<<<<< HEAD
   echo "<button name='edit_button' value='$col1[case_info_id]' class='ui black basic button' style='width:85%;'>EDIT</button>";
   echo "</td>";
   }
   echo "<td>";
   echo "<button name='view_button' value='$col1[case_info_id]' class='ui black basic button'style='width:85%;'>VIEW</button>";
+=======
+  echo "<button name='edit_button' value='$col1[case_info_id]' >EDIT</button>";
+  echo "</td>";
+  }
+  echo "<td>";
+  echo "<button name='view_button' value='$col1[case_info_id]' >VIEW</button>";
+>>>>>>> bccd33b5a04be43c6661577d21eb7a371d6dd5cf
   echo "</td>";
   echo"</tr>";
 
