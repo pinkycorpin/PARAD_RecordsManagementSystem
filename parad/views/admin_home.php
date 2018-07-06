@@ -56,7 +56,7 @@ include_once('../include/db.inc.php');
     <center>
     <div class="body" style="width:100%;height:80%;">
         
-        <div class="view" style="width:95%;height:100%;background-color:rgba(225,225,225,.3);">   
+        <div class="view" style="width:80%;height:100%;background-color:lightgray;">   
             <?php include_once('../include/user_view.inc.php');?>
         </div>
         

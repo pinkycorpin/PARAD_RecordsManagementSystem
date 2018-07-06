@@ -1,4 +1,3 @@
-
 <?php
 
 $case_details = "SELECT * from case_information";
@@ -129,29 +128,16 @@ if(baseline=="" || baseline=="all"){
     }       
   }
 }
+
+
 }
 </script>
 
-<<<<<<< HEAD
-    <select name="select" id="down" onchange="createValue()">
-    <option value="all">All</option>
-    <option value="id">ID</option>
-    <option value="case_title">Case Title</option>
-    <option value="case_number">Case Number</option>
-    <option value="title_number">Title Number</option>
-    <option value="land_area">Land Area</option>
-    <option value="land_owner">Land Owner</option>
-    <option value="adjucator">Adjucator</option>
-    <option value="status">status</option>    
-    </select>
-<form action="../include/view_edit.php" method="POST">
-=======
-
-       <table class="table table-borderless" style="width:30%;float:right;background-color:rgba(225,225,225,.01);">
+     <table class="table table-borderless" style="width:30%;float:right;background-color:rgba(225,225,225,.01);">
           <thead>
             <tr>
               <th scope="col">
-              <select class="ui dropdown">
+              <select class="ui dropdown" name="select" id="down" onchange="createValue()">
                   <option value="all">All</option>
                   <option value="id">ID</option>
                   <option value="case_title">Case Title</option>
@@ -174,7 +160,7 @@ if(baseline=="" || baseline=="all"){
             </tr>
           </thead>
         </table>
->>>>>>> cd35a6baba1256fa1bf39ee0a0db4e5ab5959881
+<form action="../include/view_edit.php" method="POST">
 
 <?php
 echo"<table id=\"myTable\" class='table table-striped table-hover' style='float:left;'>";
